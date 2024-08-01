@@ -8,10 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        "max-md": { max: "768px" },
+        "max-lg": { max: "1024px" },
+      },
+      colors: {
+        background: "var(--background)",
+        color: "var(--color)",
+        accentBackground: "var(--accent-background)",
+      },
+      animation: {
+        reveal: "reveal 1s forwards cubic-bezier(0.77, 0, 0.175, 1)",
+      },
+      keyframes: {
+        reveal: {
+          to: {
+            "clip-path": "inset(0 0 0 0)",
+          },
+        },
       },
     },
   },
